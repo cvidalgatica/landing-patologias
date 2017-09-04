@@ -101,6 +101,7 @@ header{
 }
 .cursos__main-info{
   width: 100%;
+  padding-right:15px;
 }
 .cursos__title,
 .cursos__teacher{
@@ -135,6 +136,7 @@ header{
 
 .banner-inferior{
   position: relative;
+  margin: 0;
 }
 .parallax{
   position:absolute;
@@ -250,4 +252,14 @@ header{
 
 footer{
   background-color:$celeste;
+  color: white;
+  padding:15px;
+  margin: 0;
+  margin-top: -17px;
+}
+.footer__texto{
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  flex-direction: column;
 }
