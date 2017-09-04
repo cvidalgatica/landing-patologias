@@ -218,6 +218,35 @@ header{
     right: 510px;
   }
 }
+.circ-4{
+  display: none;
+  @include media-breakpoint-up(md){
+    display: block;
+    background-color: #bababa;
+    width: 80px;
+    height: 80px;
+    border-radius:50px;
+    top:200px;
+    right: 10%;
+    background-size:cover;
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+  @include media-breakpoint-up(lg){
+    width: 100px;
+    height: 100px;
+    border-radius:75px;
+    top:260px;
+    right: 5%;
+  }
+  @include media-breakpoint-up(xl){
+    width: 136px;
+    height: 136px;
+    border-radius:105px;
+    top:310px;
+    right: 125px;
+  }
+}
 
 footer{
   background-color:$celeste;
