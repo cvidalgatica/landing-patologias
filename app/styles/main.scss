@@ -1,0 +1,224 @@
+$enable-flex: true;
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+// awesome:scss
+@import "../awesome/font-awesome.scss";
+
+@import "variables";
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// estilos y arreglos
+.container-fluid{
+  max-width: 1280px;
+}
+.jumbotron{
+  border-radius: 0;
+}
+.card{
+  border-radius:0;
+  border:0;
+}
+hr{
+  border-top:1px solid black;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+// header
+header{
+
+}
+.logo_pharmainvesti{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  #logo{
+    width: 100%;
+    text-align:center;
+  }
+}
+.logos{
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.logo-principal{
+  width: 100%;
+  text-align: center;
+}
+.logos-secundarios{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner-principal{
+  background-color:$celeste;
+  color: white;
+}
+.banner-principal__row{
+  justify-content: center;
+  align-items:center;
+}
+.banner-principal__texto,
+.banner-principal__img{
+  text-align:center;
+}
+.banner-principal__texto{
+  font-size:2.5rem;
+  font-family: Myriad, Myriad Pro, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  @include media-breakpoint-up(sm){
+    font-size: 3rem;
+  }
+  @include media-breakpoint-up(md){
+    font-size: 4.2rem;
+  }
+}
+
+.cursos{
+  padding:15px 45px;
+  .card{
+    margin-bottom: 15px;
+  }
+}
+.cursos__figure{
+  height: 0px;
+  padding-bottom:56.25%;
+  overflow: hidden;
+}
+.cursos__info{
+  display: flex;
+}
+.cursos__main-info{
+  width: 100%;
+}
+.cursos__title,
+.cursos__teacher{
+  clear: both;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+}
+.cursos__title{
+  color:$celeste;
+  font-size:1rem;
+}
+.cursos__teacher{
+  color:$naranjo;
+  font-size:0.8rem;
+}
+.cursos__link{
+  width: 60px;
+  height: 60px;
+  display: block;
+  flex-basis:60px;
+  flex:none;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color:black;
+  background-color:$gris-claro;
+  i{
+    font-size:1.6rem;
+  }
+}
+
+.banner-inferior{
+  position: relative;
+}
+.parallax{
+  position:absolute;
+  z-index: 2;
+}
+.circ-1{
+  display: none;
+  @include media-breakpoint-up(md){
+    display: block;
+    background-image: url(../img/circ-1.png);
+    background-repeat:no-repeat;
+    width: 250px;
+    height: 250px;
+    top:100px;
+    right: 80px;
+    background-size:cover;
+  }
+  @include media-breakpoint-up(lg){
+    width: 350px;
+    height: 350px;
+    top:85px;
+    right: 80px;
+  }
+  @include media-breakpoint-up(xl){
+    width: 550px;
+    height: 550px;
+    top:65px;
+    right: 80px;
+  }
+}
+.circ-2{
+  display: none;
+  @include media-breakpoint-up(md){
+    display: block;
+    background-image: url(../img/circ-2.png);
+    background-repeat:no-repeat;
+    width: 150px;
+    height: 150px;
+    top:200px;
+    right: 50%;
+    background-size:cover;
+  }
+  @include media-breakpoint-up(lg){
+    width: 250px;
+    height: 250px;
+    top:300px;
+    right: 40%;
+  }
+  @include media-breakpoint-up(xl){
+    width: 345px;
+    height: 345px;
+    top:545px;
+    right: 500px;
+  }
+}
+.circ-3{
+  display: none;
+  @include media-breakpoint-up(md){
+    display: block;
+    background-color: rgba(41,171,226,0.8);
+    width: 100px;
+    height: 100px;
+    border-radius:50px;
+    top:70px;
+    right: 40%;
+    background-size:cover;
+    mix-blend-mode: multiply;
+  }
+  @include media-breakpoint-up(lg){
+    width: 150px;
+    height: 150px;
+    border-radius:75px;
+    top:60px;
+    right: 35%;
+  }
+  @include media-breakpoint-up(xl){
+    width: 210px;
+    height: 210px;
+    border-radius:105px;
+    top:50px;
+    right: 510px;
+  }
+}
+
+footer{
+  background-color:$celeste;
+}
