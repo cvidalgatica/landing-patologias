@@ -42,6 +42,14 @@ header{
   #logo{
     width: 100%;
     text-align:center;
+    img{
+      width: 200px;
+      height: auto;
+      @include media-breakpoint-up(sm){
+        max-width: 100%;
+        width: 100%;
+      }
+    }
   }
 }
 .logos{
@@ -54,11 +62,28 @@ header{
 .logo-principal{
   width: 100%;
   text-align: center;
+  figure{
+    img{
+      width: 180px;
+      height: auto;
+      @include media-breakpoint-up(sm){
+        width: auto;
+        max-width:100%;
+      }
+    }
+  }
 }
 .logos-secundarios{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @include media-breakpoint-up(sm){
+    flex-wrap: nowrap;
+  }
+  figure{
+    width: 25%;
+  }
 }
 
 .banner-principal{
@@ -89,6 +114,10 @@ header{
   padding:15px 45px;
   .card{
     margin-bottom: 15px;
+    &:hover{
+      text-decoration: none;
+      opacity: 0.75;
+    }
   }
 }
 .cursos__figure{
@@ -141,112 +170,172 @@ header{
 .parallax{
   position:absolute;
   z-index: 2;
+  &.circ-1{
+    display: none;
+    @include media-breakpoint-up(md){
+      display: block;
+      background-image: url(../img/circ-1.png);
+      background-repeat:no-repeat;
+      width: 250px;
+      height: 250px;
+      top:100px;
+      right: 80px;
+      background-size:cover;
+    }
+    @include media-breakpoint-up(lg){
+      width: 350px;
+      height: 350px;
+      top:85px;
+      right: 80px;
+    }
+    @include media-breakpoint-up(xl){
+      width: 550px;
+      height: 550px;
+      top:65px;
+      right: 80px;
+    }
+  }
+  &.circ-2{
+    display: none;
+    @include media-breakpoint-up(md){
+      display: block;
+      background-image: url(../img/circ-2.png);
+      background-repeat:no-repeat;
+      width: 150px;
+      height: 150px;
+      top:200px;
+      right: 50%;
+      background-size:cover;
+    }
+    @include media-breakpoint-up(lg){
+      width: 250px;
+      height: 250px;
+      top:300px;
+      right: 40%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 345px;
+      height: 345px;
+      top:545px;
+      right: 500px;
+    }
+  }
+  &.circ-3{
+    display: none;
+    @include media-breakpoint-up(md){
+      display: block;
+      background-color: rgba(41,171,226,0.8);
+      width: 100px;
+      height: 100px;
+      border-radius:50px;
+      top:70px;
+      right: 40%;
+      background-size:cover;
+      mix-blend-mode: multiply;
+    }
+    @include media-breakpoint-up(lg){
+      width: 150px;
+      height: 150px;
+      border-radius:75px;
+      top:60px;
+      right: 35%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 210px;
+      height: 210px;
+      border-radius:105px;
+      top:50px;
+      right: 510px;
+    }
+  }
+  &.circ-4{
+    display: none;
+    @include media-breakpoint-up(md){
+      display: block;
+      background-color: #bababa;
+      width: 80px;
+      height: 80px;
+      border-radius:50px;
+      top:200px;
+      right: 10%;
+      background-size:cover;
+      mix-blend-mode: multiply;
+      z-index: 1;
+    }
+    @include media-breakpoint-up(lg){
+      width: 100px;
+      height: 100px;
+      border-radius:75px;
+      top:260px;
+      right: 5%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 136px;
+      height: 136px;
+      border-radius:105px;
+      top:310px;
+      right: 125px;
+    }
+  }
 }
-.circ-1{
-  display: none;
-  @include media-breakpoint-up(md){
+// sin parallax
+.no-parallax{
+  position:absolute;
+  &.circ-1{
     display: block;
     background-image: url(../img/circ-1.png);
     background-repeat:no-repeat;
-    width: 250px;
-    height: 250px;
-    top:100px;
-    right: 80px;
-    background-size:cover;
+    width: 40%;
+    height: 60%;
+    top:40px;
+    right: 50px;
+    background-size:contain;
+    @include media-breakpoint-up(md){
+      display: none;
+    }
   }
-  @include media-breakpoint-up(lg){
-    width: 350px;
-    height: 350px;
-    top:85px;
-    right: 80px;
-  }
-  @include media-breakpoint-up(xl){
-    width: 550px;
-    height: 550px;
-    top:65px;
-    right: 80px;
-  }
-}
-.circ-2{
-  display: none;
-  @include media-breakpoint-up(md){
+  &.circ-2{
     display: block;
     background-image: url(../img/circ-2.png);
     background-repeat:no-repeat;
-    width: 150px;
-    height: 150px;
-    top:200px;
+    width: 25%;
+    height: 25%;
+    top: 30px;
     right: 50%;
-    background-size:cover;
+    background-size:contain;
+    background-position:center;
+    @include media-breakpoint-up(md){
+      display: none;
+    }
   }
-  @include media-breakpoint-up(lg){
-    width: 250px;
-    height: 250px;
-    top:300px;
-    right: 40%;
-  }
-  @include media-breakpoint-up(xl){
-    width: 345px;
-    height: 345px;
-    top:545px;
-    right: 500px;
-  }
-}
-.circ-3{
-  display: none;
-  @include media-breakpoint-up(md){
+  &.circ-3{
     display: block;
     background-color: rgba(41,171,226,0.8);
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius:50px;
-    top:70px;
+    top:10px;
     right: 40%;
-    background-size:cover;
+    background-size:contain;
     mix-blend-mode: multiply;
+    @include media-breakpoint-up(md){
+      display: none;
+    }
   }
-  @include media-breakpoint-up(lg){
-    width: 150px;
-    height: 150px;
-    border-radius:75px;
-    top:60px;
-    right: 35%;
-  }
-  @include media-breakpoint-up(xl){
-    width: 210px;
-    height: 210px;
-    border-radius:105px;
-    top:50px;
-    right: 510px;
-  }
-}
-.circ-4{
-  display: none;
-  @include media-breakpoint-up(md){
+  &.circ-4{
     display: block;
     background-color: #bababa;
     width: 80px;
     height: 80px;
     border-radius:50px;
-    top:200px;
+    top:150px;
     right: 10%;
-    background-size:cover;
+    background-size:contain;
     mix-blend-mode: multiply;
     z-index: 1;
-  }
-  @include media-breakpoint-up(lg){
-    width: 100px;
-    height: 100px;
-    border-radius:75px;
-    top:260px;
-    right: 5%;
-  }
-  @include media-breakpoint-up(xl){
-    width: 136px;
-    height: 136px;
-    border-radius:105px;
-    top:310px;
-    right: 125px;
+    @include media-breakpoint-up(md){
+      display: none;
+    }
   }
 }
 
